@@ -1,7 +1,9 @@
+
+                                                ## Overall idea of functioning of this code
 ## There are two functions here. First is makeCacheMatrix and second is cacheSolve. The first one takes an invertible matrix as its argument
 ## and returns a list of four functions. Then the second function cachesolve is there which takes this list as an argument and returns 
 ## the inverse of orignal matrix.
-
+                                                ## Overall idea of functioning of function makeCacheMatrix
 ## makeCacheMatrix takes an invertible matrix as its argument and returns a list containing four functoons. 
 ## Here set() function substitutes the value of input matrix with its argument(b) globally. get 
 ## is used to returns back the matrix . Similarly setinverse() substitutes the value of z with
@@ -20,7 +22,7 @@ makeCacheMatrix <- function(a = matrix()) {
 ## Returns a list of functions
 }
 
-
+                                                ## Overall idea of functioning of function cacheSolve
 ## Now the list makeCacheMatrix returns is fed into cacheSolve as its argument. It first checks if the inverse of this matrix is already
 ## cached in the memory or not. If yes, it returns that cached value and nothing else is executed. If no, it finds the inverse using solve()
 ## and store it into cache so that in future if we require the inverse of the same matrix, we can simply get cached data.
