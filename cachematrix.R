@@ -1,14 +1,11 @@
-## There are two functions here. First is makeCacheMatrix and second is cacheSolve. The first one takes an invertible matrix as an input
-## and returns a list of four functions. Then the second function is called which takes this list as an argument and returns the inverse
-## of orignal matrix.
-
-
-
-
+## There are two functions here. First is makeCacheMatrix and second is cacheSolve. The first one takes an invertible matrix as its argument
+## and returns a list of four functions. Then the second function cachesolve is there which takes this list as an argument and returns 
+## the inverse of orignal matrix.
 
 ## makeCacheMatrix takes an invertible matrix as its argument and returns a list containing four functoons. 
-## Here set function substitutes the value of input argument globally. get 
-## is used to return the input argument after the changes (if any) done by set(). Setinverse 
+## Here set() function substitutes the value of input matrix with its argument(b) globally. get 
+## is used to returns back the matrix . Similarly setinverse() substitutes the value of z with
+## its argument(inverse). getinverse() returns the value of z. 
 
 makeCacheMatrix <- function(a = matrix()) {
         z<- NULL
@@ -25,9 +22,8 @@ makeCacheMatrix <- function(a = matrix()) {
 
 
 ## Now the list makeCacheMatrix returns is fed into cacheSolve as its argument. It first checks if the inverse of this matrix is already
-## cached in the memory or not. If yes, it returns that value and nothing else is executed. If no, it finds the inverse using solve()
-## and store it into cache so that if in future if we require the inverse of the same matrix, we dont have to solve it again.
-## functions do
+## cached in the memory or not. If yes, it returns that cached value and nothing else is executed. If no, it finds the inverse using solve()
+## and store it into cache so that in future if we require the inverse of the same matrix, we can simply get cached data.
 
 cacheSolve <- function(x, ...) {
         inv<-x$getinverse()
